@@ -98,6 +98,23 @@ public extension UIViewController {
         av.addAction(UIAlertAction(title: NSLocalizedString(cancelTitle, comment: ""), style: .cancel, handler: nil))
         present(av, animated: true, completion: nil)
     }
+
+    func showInput(_ msg: String, okTitle: String = "OK", cancelTitle: String = "Cancel", title _: String = "", placeholder: String = "", currentName: String = "", cancel: (() -> Void)? = nil, completion: @escaping ((String) -> Void)) {
+        let av = UIAlertController(title: "", message: msg, preferredStyle: .alert)
+
+        av.addTextField { textField in
+            textField.text = currentName
+            textField.placeholder = placeholder
+            textField.returnKeyType = .done
+        }
+        av.addAction(UIAlertAction(title: NSLocalizedString(okTitle, comment: ""), style: .default, handler: { _ in
+            if let textField = av.textFields?.first, let text = textField.text {
+                completion(text)
+            }
+        }))
+        av.addAction(UIAlertAction(title: NSLocalizedString(cancelTitle, comment: ""), style: .cancel, handler: { _ in cancel?() }))
+        present(av, animated: true, completion: nil)
+    }
 }
 
 public extension UIView {

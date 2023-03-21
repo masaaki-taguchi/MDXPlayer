@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		529BB72B29C8A8F000B80107 /* PlaylistItemListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BB72629C8A8F000B80107 /* PlaylistItemListVC.swift */; };
+		529BB72C29C8A8F000B80107 /* PlaylistConstans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BB72729C8A8F000B80107 /* PlaylistConstans.swift */; };
+		529BB72D29C8A8F000B80107 /* PlaylistAddModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BB72829C8A8F000B80107 /* PlaylistAddModalVC.swift */; };
+		529BB72E29C8A8F000B80107 /* PlaylistListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BB72929C8A8F000B80107 /* PlaylistListVC.swift */; };
+		529BB72F29C8A8F000B80107 /* PlaylistRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BB72A29C8A8F000B80107 /* PlaylistRealm.swift */; };
 		C30C89411D7B299200908D62 /* Auxiliary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C893E1D7B299200908D62 /* Auxiliary.swift */; };
 		C30C89421D7B299200908D62 /* NSextension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C893F1D7B299200908D62 /* NSextension.swift */; };
 		C30C89431D7B299200908D62 /* UIextension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C89401D7B299200908D62 /* UIextension.swift */; };
@@ -68,6 +73,11 @@
 
 /* Begin PBXFileReference section */
 		18C5756025C4A1B8895623A3 /* Pods_mdxplayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mdxplayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		529BB72629C8A8F000B80107 /* PlaylistItemListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistItemListVC.swift; sourceTree = "<group>"; };
+		529BB72729C8A8F000B80107 /* PlaylistConstans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistConstans.swift; sourceTree = "<group>"; };
+		529BB72829C8A8F000B80107 /* PlaylistAddModalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistAddModalVC.swift; sourceTree = "<group>"; };
+		529BB72929C8A8F000B80107 /* PlaylistListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistListVC.swift; sourceTree = "<group>"; };
+		529BB72A29C8A8F000B80107 /* PlaylistRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistRealm.swift; sourceTree = "<group>"; };
 		7C7453DBC0459ED17CA4BB53 /* Pods-mdxplayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mdxplayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mdxplayer/Pods-mdxplayer.debug.xcconfig"; sourceTree = "<group>"; };
 		C30C893E1D7B299200908D62 /* Auxiliary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auxiliary.swift; sourceTree = "<group>"; };
 		C30C893F1D7B299200908D62 /* NSextension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSextension.swift; sourceTree = "<group>"; };
@@ -338,6 +348,11 @@
 		C37AB36117113AEC004780D3 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				529BB72829C8A8F000B80107 /* PlaylistAddModalVC.swift */,
+				529BB72729C8A8F000B80107 /* PlaylistConstans.swift */,
+				529BB72629C8A8F000B80107 /* PlaylistItemListVC.swift */,
+				529BB72929C8A8F000B80107 /* PlaylistListVC.swift */,
+				529BB72A29C8A8F000B80107 /* PlaylistRealm.swift */,
 				C30C893D1D7B299200908D62 /* lib */,
 				C345FDB21D71781B009B15E8 /* objc */,
 				C3F0AC041D3232E400C252EC /* AppDelegate.swift */,
@@ -507,11 +522,17 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-mdxplayer/Pods-mdxplayer-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CustomToastView-swift/CustomToastView_swift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyDropbox/SwiftyDropbox.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CustomToastView_swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyDropbox.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,8 +549,12 @@
 			files = (
 				C32DD981170C614D00D11883 /* downsample.cpp in Sources */,
 				C32DD984170C614D00D11883 /* fmgen.cpp in Sources */,
+				529BB72B29C8A8F000B80107 /* PlaylistItemListVC.swift in Sources */,
+				529BB72F29C8A8F000B80107 /* PlaylistRealm.swift in Sources */,
 				C32DD985170C614D00D11883 /* fmtimer.cpp in Sources */,
+				529BB72C29C8A8F000B80107 /* PlaylistConstans.swift in Sources */,
 				C345FDB11D717743009B15E8 /* HistoryListVC.swift in Sources */,
+				529BB72E29C8A8F000B80107 /* PlaylistListVC.swift in Sources */,
 				C345FDBC1D71781B009B15E8 /* Player.m in Sources */,
 				C30C89411D7B299200908D62 /* Auxiliary.swift in Sources */,
 				C3F0AC091D3232E400C252EC /* AppDelegate.swift in Sources */,
@@ -546,6 +571,7 @@
 				C3D59ABA1D791E6C00CF2F6E /* RootListVC.swift in Sources */,
 				C345FDBD1D71781B009B15E8 /* SpeanaBitmap.m in Sources */,
 				F8350FF11D9C8D9A00A9B239 /* lzx042.c in Sources */,
+				529BB72D29C8A8F000B80107 /* PlaylistAddModalVC.swift in Sources */,
 				C3F0AC0B1D3232E400C252EC /* InfoVC.swift in Sources */,
 				C345FDBE1D71781B009B15E8 /* trackinfo.m in Sources */,
 			);

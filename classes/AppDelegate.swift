@@ -24,7 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window = UIWindow(frame: UIScreen.main.bounds)
 
-        window?.backgroundColor = .white
+//        window?.backgroundColor = .white
+        window?.backgroundColor = UIColor(white: 20 / 255, alpha: 1)
 
         let nav = UINavigationController(rootViewController: RootListVC())
 

@@ -23,6 +23,7 @@ class RootListVC: ListVC {
         list = [
             Item(title: "Build-in", file: "_resources_", isDir: true),
             Item(title: "Documents", file: "_documents_", isDir: true),
+            Item(title: "PlayLists", file: "_playlists_", isDir: true),
             Item(title: "Dropbox", file: "_dropbox_", isDir: true),
             Item(title: "History", file: "_history_", isDir: true),
             Item(title: "Random", file: "_random_", isDir: true),
@@ -45,6 +46,7 @@ class RootListVC: ListVC {
         var vc: ListVC!
         if item.file == "_dropbox_" { vc = DropboxListVC() }
         else if item.file == "_history_" { vc = HistoryListVC() }
+        else if item.file == "_playlists_" { vc = PlaylistListVC() }
         else { vc = ListVC() }
 
         vc.path = item.file

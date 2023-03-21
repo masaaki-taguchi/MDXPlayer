@@ -3,4 +3,6 @@ use_frameworks!
 
 target "mdxplayer" do
 	pod 'SwiftyDropbox'
+	pod 'RealmSwift'
+	pod 'CustomToastView-swift'
 end

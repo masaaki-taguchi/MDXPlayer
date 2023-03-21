@@ -1,20 +1,34 @@
 PODS:
   - Alamofire (4.8.2)
+  - CustomToastView-swift (0.1.5)
+  - Realm (10.37.0):
+    - Realm/Headers (= 10.37.0)
+  - Realm/Headers (10.37.0)
+  - RealmSwift (10.37.0):
+    - Realm (= 10.37.0)
   - SwiftyDropbox (6.0.3):
     - Alamofire (~> 4.8.2)
 
 DEPENDENCIES:
+  - CustomToastView-swift
+  - RealmSwift
   - SwiftyDropbox
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - CustomToastView-swift
+    - Realm
+    - RealmSwift
     - SwiftyDropbox
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  CustomToastView-swift: 3c2a6fe966245e2af3cb8a9d9466d1e0f54a398f
+  Realm: 9c5fc6f8f5cb70b299f2e3064d2b9f6cb0f1523d
+  RealmSwift: 7be7bb45911c16400dd1bfce3a01764ecb4cae7a
   SwiftyDropbox: 7e864f1e826bfc1b9b53a5edccef6c8d5fbe9e3b
 
-PODFILE CHECKSUM: acb66d4bdd50506ce8c8933f4a6e3c5820b08ce9
+PODFILE CHECKSUM: f35c05c8d8818cef34773374abecd5ae67310239
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.11.3

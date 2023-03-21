@@ -105,6 +105,7 @@ class ListVC: UITableViewController {
         let ar = Path.files(localPath)
         for s in ar {
             if s.hasPrefix(".") { continue }
+            if s.hasPrefix("default.realm") { continue }
             let isdir = Path.isDir(localPath.appendPath(s))
             if !isdir, !s.lowercased().hasSuffix(".mdx") { continue }
             list.append(Item(file: s, isDir: isdir))
@@ -173,6 +174,33 @@ class ListVC: UITableViewController {
         }
 
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        let item = list[indexPath.row]
+        if item.isDir {
+            return false
+        }
+        return true
+    }
+
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let item = list[indexPath.row]
+        let addList = UITableViewRowAction(style: .normal, title: "AddToList") { action, index in
+            let vc = PlaylistAddModalVC()
+            vc.selectedTitle = item.title
+            vc.selectedFile = item.file
+            vc.selectedPath = self.path
+            vc.beforeVC = self
+            self.navigationController?.present(vc, animated: true)
+        }
+        addList.backgroundColor = UIColor.mdxColor
+        return [addList]
+    }
+
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+        }
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
