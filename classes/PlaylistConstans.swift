@@ -11,7 +11,6 @@ import Foundation
 class PlaylistConstants {
     static let editButtonName = "Edit"
     static let deleteButtonName = "Delete"
-    static let shuffleButtonName = "Shuffle"
 
     static let confirmDeletePreMessage = "Are you sure you want to delete "
     static let confirmDeletePostMessage = "?"

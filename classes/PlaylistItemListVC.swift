@@ -27,8 +27,8 @@ class PlaylistItemListVC: ListVC {
     }
 
     func showRightButton() {
-        let editButton:UIBarButtonItem = UIBarButtonItem(title: PlaylistConstants.editButtonName, style: .plain, target: self, action: #selector(editPlaylist))
-        let shuffleButton:UIBarButtonItem = UIBarButtonItem(title: PlaylistConstants.shuffleButtonName, style: .plain, target: self, action: #selector(shuffle))
+        let editButton:UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "edit"), style: .plain, target: self, action: #selector(editPlaylist))
+        let shuffleButton:UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "shuffle"), style: .plain, target: self, action: #selector(shuffle))
         navigationItem.rightBarButtonItems = [editButton, shuffleButton]
     }
 
